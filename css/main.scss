@@ -386,6 +386,12 @@ button {
 .container_lobby {
     padding-left: 40px;
     padding-right: 40px;
+
+    @media (max-width: 400px) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
 }
 
 .table-lobby {
