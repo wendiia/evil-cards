@@ -395,7 +395,7 @@ button:hover {
 
 .modal-content {
   background: #182e3b;
-  padding: 20px;
+  padding: 15px;
   border-radius: 15px;
 }
 .modal-content label {
@@ -522,7 +522,7 @@ button:hover {
 }
 .players__list {
   width: 100%;
-  max-height: 630px;
+  max-height: 66.3158vh;
   overflow: auto;
 }
 .players .form-select {
@@ -670,16 +670,21 @@ button:hover {
 }
 
 .modal-game-help__text {
-  max-height: 700px;
+  max-height: 70vh;
   overflow: auto;
   margin-left: 10px;
 }
 .modal-game-help .modal-dialog {
-  max-width: 550px;
+  max-width: 30vw;
 }
 .modal-game-help .modal-dialog p {
   margin-bottom: 10px;
   font-size: 0.9em;
+}
+@media (max-width: 780px) {
+  .modal-game-help .modal-dialog {
+    max-width: 100vw;
+  }
 }
 
 .chat {
@@ -692,9 +697,10 @@ button:hover {
   padding: 20px;
 }
 .chat__content {
-  margin-top: -5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   height: 100%;
-  max-height: 580px;
+  max-height: 61.0526vh;
   word-wrap: break-word;
   overflow: auto;
 }

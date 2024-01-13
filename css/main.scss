@@ -356,7 +356,7 @@ button {
 
 .modal-content {
     background: $color-sub-bg;
-    padding: 20px;
+    padding: 15px;
     border-radius: 15px;
 
     label {
@@ -499,7 +499,7 @@ button {
 
     &__list {
         width: 100%;
-        max-height: 630px; // !! КОЛХОЗ, ибо на мобилках явно макс. будет меньше
+        max-height: 66.3158vh; // !! КОЛХОЗ, ибо на мобилках явно макс. будет меньше
         overflow: auto;
     }
 
@@ -679,18 +679,22 @@ button {
 
 .modal-game-help {
     &__text {
-        max-height: 700px;
+        max-height: 70vh;
         overflow: auto;
         margin-left: 10px;
     }
 
     .modal-dialog {
 
-        max-width: 550px;
+        max-width: 30vw;
 
         p {
             margin-bottom: 10px;
             font-size: 0.9em;
+        }
+
+        @media (max-width: 780px) {
+            max-width: 100vw;
         }
     }
 }
@@ -706,9 +710,10 @@ button {
     padding: 20px;
 
     &__content {
-        margin-top: -5px;
+        margin-top: 15px;
+        margin-bottom: 15px;
         height: 100%;
-        max-height: 580px;
+        max-height: 61.0526vh;
         word-wrap: break-word; 
         overflow: auto;
         p {
