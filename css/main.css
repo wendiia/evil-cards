@@ -207,7 +207,7 @@ input {
 }
 
 select {
-  background-color: #182e3b !important;
+  background-color: #152A36 !important;
   background-image: url("../img/angle-down.svg") !important;
   color: #fff !important;
   border: none !important;
@@ -243,6 +243,10 @@ button:hover {
   color: #ccdedb;
 }
 
+.radio-fill-blue:checked + svg path {
+  fill: #4EB5B5;
+}
+
 .btn-outline {
   background: transparent;
   border: 1px solid #ccdedb;
@@ -262,7 +266,7 @@ button:hover {
 
 .btn-svg {
   padding: 0;
-  line-height: normal;
+  line-height: 0;
   background-color: transparent;
   border: none;
   opacity: 0.2;
@@ -274,14 +278,13 @@ button:hover {
 }
 
 .btn-ashy {
-  background: #182e3b;
-  border-color: #182e3b;
+  background: #152A36;
+  border-color: #152A36;
 }
 .btn-ashy:hover {
   background: #11212a;
 }
 
-/*hj*/
 .container {
   position: relative;
   background: #102430;
@@ -382,6 +385,8 @@ button:hover {
 }
 
 .my-btn-close {
+  position: absolute;
+  right: 0px;
   padding: 5px;
   padding-top: 0;
   padding-bottom: 0;
@@ -394,7 +399,7 @@ button:hover {
 }
 
 .modal-content {
-  background: #182e3b;
+  background: #152A36;
   padding: 15px;
   border-radius: 15px;
 }
@@ -422,6 +427,14 @@ button:hover {
   margin-right: auto;
 }
 
+.vertical-line {
+  width: 3px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: #26414F;
+}
+
 /* СТРАНИЦА ВЫБОРА ЛОББИ */
 .container_lobby {
   padding-left: 40px;
@@ -444,7 +457,7 @@ button:hover {
   }
 }
 .table-lobby thead {
-  background: #182e3b;
+  background: #152A36;
 }
 .table-lobby thead th {
   color: #fff;
@@ -462,7 +475,7 @@ button:hover {
   max-width: 100px;
 }
 .table-lobby tbody tr {
-  border-bottom: 3px solid #182e3b;
+  border-bottom: 3px solid #152A36;
 }
 
 .btn-lobby {
@@ -531,7 +544,7 @@ button:hover {
 }
 
 .card-player {
-  background: #182e3b;
+  background: #152A36;
   padding: 5px 10px;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -567,19 +580,60 @@ button:hover {
   flex-shrink: 0;
   background: #223C4B;
   border-radius: 100%;
-  color: #182e3b;
+  color: #152A36;
   font-size: 2em;
   font-weight: 600;
   font-family: Gilroy;
+}
+
+.card-player_winner {
+  background: #223C4B;
+}
+.card-player_winner .card-player__avatar {
+  width: 1.6em;
+  height: 1.6em;
+  font-size: 1.5em;
+  background: #11212a;
+  color: #ccdedb;
+}
+
+.card-player_winner-others {
+  background: #11212a;
+}
+.card-player_winner-others .card-player__avatar {
+  width: 1.6em;
+  height: 1.6em;
+  font-size: 1.5em;
+}
+.card-player_winner-others .winner-two-text, .card-player_winner-others .winner-three-text {
+  font-size: 1.5em;
+  font-family: Gilroy;
+  font-weight: 800;
+  margin-left: 7px;
+  margin-right: 14px;
+  line-height: 1.5em;
+}
+.card-player_winner-others .winner-three-text {
+  color: #A05D37;
 }
 
 .block-game label {
   width: 100%;
 }
 
+.block-game__btns-manage {
+  display: flex;
+  margin-left: 50px;
+  margin-right: 50px;
+}
 .block-game__btns-manage button {
   padding-top: 5px;
   padding-bottom: 5px;
+}
+@media (max-width: 600px) {
+  .block-game__btns-manage {
+    margin: 0;
+  }
 }
 
 .games__title {
@@ -692,7 +746,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #182e3b;
+  background: #152A36;
   border-radius: 15px;
   padding: 20px;
 }
@@ -729,4 +783,116 @@ button:hover {
   margin-top: auto;
   margin-bottom: auto;
   transform: scale(-1, -1);
+}
+
+/* ИГРА */
+.modal-game-end h5 {
+  font-size: 1.4em;
+  color: #4EB5B5;
+  font-family: Gilroy;
+  font-weight: 500;
+}
+
+.modal-game-exit__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal-game-exit p {
+  font-size: 1.2em;
+}
+.modal-game-exit button {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.modal-game-settings__text {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.modal-game-settings__text div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.container_game {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.status-bar {
+  border-radius: 15px;
+  padding: 5px 20px;
+  background: #152A36;
+  margin: 0;
+}
+.status-bar__leader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.status-bar__leader h6 {
+  color: #FFF;
+  font-family: Gilroy;
+  font-size: 1em;
+  margin-bottom: 0;
+}
+.status-bar__leader p {
+  font-family: Gilroy Medium;
+}
+.status-bar__round {
+  color: #FFF;
+  font-weight: 500;
+  font-family: Gilroy;
+  font-size: 1.1em;
+  margin-bottom: 0;
+}
+.status-bar__time-line {
+  height: 6px;
+  width: 95%;
+  border-radius: 5px;
+  background: #4EB5B5;
+}
+.status-bar__time {
+  color: #4EB5B5;
+  font-family: Gilroy;
+  font-size: 1.4em;
+  font-weight: 500;
+  line-height: 0.55em;
+}
+
+.commercial button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+.commercial__btn-discord {
+  background: #324E94;
+  border-color: #324E94;
+}
+.commercial__btn-discord:hover {
+  background: #203874;
+}
+
+.game-players {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  height: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background: #152A36;
+}
+.game-players__settings button {
+  opacity: 1 !important;
+}
+.game-players h6 {
+  color: white;
+  font-weight: 600;
+}
+.game-players p {
+  font-size: 0.8em;
 }/*# sourceMappingURL=main.css.map */
