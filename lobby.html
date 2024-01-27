@@ -71,12 +71,17 @@
             </button>
           </div>
           <div class="col-auto">
-            <button class="btn-ashy me-2" type="button">
-              Все
-            </button>
-            <button class="btn-ashy" type="button">
-              500 злобных карт
-            </button>
+
+            <label class="game-filter me-2">
+              <input type="radio" name="game-filter" value="all" class="game-filter__input d-none" />
+              <p class="game-filter__text"> Все </p>
+            </label>
+
+            <label class="game-filter">
+              <input type="radio" name="game-filter" value="game-1" class="game-filter__input d-none" />
+              <p class="game-filter__text"> 500 злобных карт </p>
+            </label>
+
           </div>
         </div>
 

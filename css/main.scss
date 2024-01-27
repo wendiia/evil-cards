@@ -474,7 +474,57 @@ button {
     }
 }
 
+.game-filter {
+    &__text {
+        border-radius: 5px;
+        padding: 5px 10px;
+        background: $color-sub-bg;
+        transition: 0.3s ease;
+    }
+
+    &__input:checked+p {
+        background: $color-blue;
+    }
+}
+
 /* СТРАНИЦА ВЫБОРА ИГРЫ */
+
+.modal-invite-players__input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+}
+
+.modal-invite-players__copy {
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    top: 0px;
+}
+
+
+.alert-success {
+    background-color: #2beeff29;
+    border: none;
+}
+
+.alert {
+    padding: 0.5em;
+    border-radius: 5px;
+
+    .my-btn-close {
+        right: 5px;
+        top: 0;
+        bottom: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+
+        &:hover {
+            background: transparent;
+        }
+    }
+}
+
 
 .btn-back {
     position: absolute;
@@ -581,7 +631,7 @@ button {
 .card-player_winner {
     background: #223C4B;
 
-    .card-player__avatar  {
+    .card-player__avatar {
         width: 1.6em;
         height: 1.6em;
         font-size: 1.5em;
@@ -593,14 +643,15 @@ button {
 .card-player_winner-others {
     background: $color-bg;
 
-    .card-player__avatar  {
+    .card-player__avatar {
         width: 1.6em;
         height: 1.6em;
         font-size: 1.5em;
-        
+
     }
 
-    .winner-two-text, .winner-three-text {
+    .winner-two-text,
+    .winner-three-text {
         font-size: 1.5em;
         font-family: Gilroy;
         font-weight: 800;
@@ -608,7 +659,7 @@ button {
         margin-right: 14px;
         line-height: 1.5em;
     }
-    
+
     .winner-three-text {
         color: #A05D37;
     }
@@ -816,7 +867,7 @@ button {
 /* ИГРА */
 
 .modal-game-end {
-    
+
     h5 {
         font-size: 1.4em;
         color: $color-blue;
@@ -950,4 +1001,43 @@ button {
     p {
         font-size: 0.8em;
     }
+}
+
+.chat-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.game-chat {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    max-width: 19%;
+    width: 100%;
+    height: 43%;
+    padding: 10px;
+    border-radius: 10px;
+
+    h6 {
+        font-size: 0.9em !important;
+    }
+
+    p {
+        font-size: 0.8em;
+    }
+
+    input {
+        padding-top: 4px;
+        padding-bottom: 4px;
+        border-radius: 5px;
+    }
+
+    .my-btn-close {
+        right: 10px;
+        top: 5px;
+    }
+
 }

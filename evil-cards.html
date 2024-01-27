@@ -14,8 +14,8 @@
 <body>
 
   <!-- Модальное окно с результатами игры -->
-  <div class="modal-game-end modal fade" id="modalGameEnd" tabindex="-1" 
-    aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-game-end modal fade" id="modalGameEnd" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="d-flex justify-content-between align-items-center position-relative">
@@ -52,7 +52,7 @@
             <p>Баллов: <span class="fw-bold text-color-blue"> 2 </span> </p>
           </div>
 
-          
+
           <div class="card-player card-player_winner-others d-flex align-items-center justify-content-between w-100">
             <div class="d-flex">
               <p class="winner-three-text"> 3. </p>
@@ -141,13 +141,13 @@
           <hr class="hr-line mx-0 mt-2 w-100" size="4"> -->
 
           <div class="form-switch">
-            <label for="flexSwitchCheckDefault">Комната публичная: </label>
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label>Комната публичная: </label>
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault1">
           </div>
 
           <div class="form-switch">
-            <label for="flexSwitchCheckDefault">Twitch версия: </label>
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label>Twitch версия: </label>
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault2">
           </div>
 
           <div class="d-flex">
@@ -331,10 +331,10 @@
               <button class="commercial__btn-discord w-100 me-3"> <img class="" src="./img/i-discord.svg" height="20"
                   alt=""> </button>
 
-                  
-                <button class="btn-svg" type="button" data-bs-toggle="modal" data-bs-target="#modalGameEnd">
-                  <img src="./img/exit.svg" alt="">
-                </button>
+
+              <button class="btn-svg" type="button" data-bs-toggle="modal" data-bs-target="#modalGameEnd">
+                <img src="./img/exit.svg" alt="">
+              </button>
 
 
               <button class="commercial__btn-boosty w-100 my-auto"> <img class="" src="./img/i-boosty.svg" height="25"
@@ -619,6 +619,37 @@
             </div>
 
           </div>
+
+        </div>
+
+
+        <button type="button" id="chatBtn" class="chat-btn" data-bs-dismiss="modal" aria-label="Закрыть">
+          <img class="align-middle" src="./img/message.svg" alt="">
+        </button>
+
+
+        <div class="chat game-chat">
+
+          <button type="button" class="my-btn-close" id="chatClose" data-bs-dismiss="modal" aria-label="Закрыть">
+            <i class="fa-solid fa-xmark" style="color: #ffffff;"></i>
+          </button>
+
+          <div class="">
+            <h6 class="title-white"> Чат </h6>
+            <hr class="hr-line mb-0" size="5">
+          </div>
+
+          <div class="chat__content">
+            <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня
+              пожалуйста....</p>
+          </div>
+
+          <div class="chat__input">
+            <img src="./img/angle-left-solid.svg" alt="">
+            <input type="text" maxlength="15" class="form-control" id="inputNickname" aria-describedby="emailHelp"
+              placeholder="Напиши что-нибудь...">
+          </div>
+
         </div>
 
       </div>
@@ -627,6 +658,23 @@
   </main>
   <script src="./js/bootstrap.bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/5aa26e8b69.js" crossorigin="anonymous"></script>
+
+  
+  <script>
+    $(document).ready(function () {
+      $('.game-chat').toggle();
+      $('#chatBtn').click(function () {
+        $('.game-chat').toggle();
+        $('#chatBtn').toggle();
+      });
+
+      $('#chatClose').click(function () {
+        $('.game-chat').toggle();
+        $('#chatBtn').toggle();
+      });
+      
+    });
+  </script>
 </body>
 
 </html>

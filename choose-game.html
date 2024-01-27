@@ -20,7 +20,8 @@
       <div class="modal-content">
         <div class="d-flex justify-content-between align-items-center">
           <div class=""></div>
-          <h1 class="my-modal-title title-white mx-auto" id="exampleModalLabel"> Правила игры: <span class="text-color-blue">
+          <h1 class="my-modal-title title-white mx-auto" id="exampleModalLabel"> Правила игры: <span
+              class="text-color-blue">
               500 злобных карт </span> </h1>
           <button type="button" class="my-btn-close" data-bs-dismiss="modal" aria-label="Закрыть">
             <i class="fa-solid fa-xmark" style="color: #ffffff;"></i>
@@ -56,6 +57,54 @@
     </div>
   </div>
 
+  <!-- Модальное окно предупреждения о кике игрока -->
+  <div class="modal-kick-player modal fade" id="modalKickPlayer" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="d-flex justify-content-between align-items-center position-relative">
+          <h1 class="my-modal-title title-white mx-auto" id="exampleModalLabel"> Кик игрока </h1>
+          <button type="button" class="my-btn-close" data-bs-dismiss="modal" aria-label="Закрыть">
+            <i class="fa-solid fa-xmark" style="color: #ffffff;"></i>
+          </button>
+        </div>
+        <hr class="hr-line" size="5">
+        <div class="modal-game-exit__text mb-3">
+          <p class="mb-4"> Вы точно хотите исключить игрока Three Dog Night? </p>
+          <div class="d-flex w-75">
+            <button class="w-100 me-3"> Да </button>
+            <button type="button" data-bs-dismiss="modal" aria-label="Закрыть" class="w-100 btn-outline"> Нет </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Модальное окно приглашение друзей -->
+  <div class="modal-invite-players modal fade" id="modalInvitePlayers" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="d-flex justify-content-between align-items-center position-relative">
+          <h1 class="my-modal-title title-white mx-auto" id="exampleModalLabel"> приглашение друзей </h1>
+          <button type="button" class="my-btn-close" data-bs-dismiss="modal" aria-label="Закрыть">
+            <i class="fa-solid fa-xmark" style="color: #ffffff;"></i>
+          </button>
+        </div>
+        <hr class="hr-line" size="5">
+        <div class="modal-invite-players__text">
+          <p class="mb-4 text-center"> Отправьте другу ссылку-приглашение в комнату </p>
+          <div class="position-relative mb-3">
+            <input class="mx-auto modal-invite-players__input" type="text" value="https://discord.gg/uWB4G7DP" readonly>
+            <button type="button" id="btnInvitePlayers" class="modal-invite-players__copy"> Копировать </button>
+          </div>
+
+          <div id="btnInvitePlayersPlaceholder"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <main>
     <div class="wrapper">
       <!-- Рисунки драконов по бокам -->
@@ -64,6 +113,7 @@
 
       <!-- Основной контент -->
       <div class="container">
+
         <div class="row mb-3">
           <button class="btn-outline btn-back" type="button">
             <i class="fa-solid fa-angle-left"></i>
@@ -125,7 +175,7 @@
                   </div>
                   <div class="card-player__btns">
                     <button class="card-player__btn-crown"> <img src="./img/crown.svg" alt="give-rights"> </button>
-                    <button class="card-player__btn-close"> <img src="./img/close.svg" alt="kick-player"> </button>
+                    <button class="card-player__btn-close" data-bs-toggle="modal" data-bs-target="#modalKickPlayer"> <img src="./img/close.svg" alt="kick-player"> </button>
                   </div>
                 </div>
 
@@ -366,7 +416,7 @@
             </div>
 
             <div class="block-game__btns-manage d-flex">
-              <button class="btn-outline w-100 me-4" type="button"> Пригласить </button>
+              <button class="btn-outline w-100 me-4" type="button" data-bs-toggle="modal" data-bs-target="#modalInvitePlayers"> Пригласить </button>
               <button class="w-100"> Играть </button>
             </div>
 
@@ -381,27 +431,42 @@
               </div>
 
               <div class="chat__content">
-                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня пожалуйста....</p>
-                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня пожалуйста....</p>
-                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня пожалуйста....</p>
-                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня пожалуйста....</p>
-                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня пожалуйста....</p>
-                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня пожалуйста....</p>
-                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня пожалуйста....</p>
-                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня пожалуйста....</p>
-                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня пожалуйста....</p>
-                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня пожалуйста....</p>
-                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня пожалуйста....</p>
-                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня пожалуйста....</p>
-                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня пожалуйста....</p>
-                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня пожалуйста....</p>
-                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня пожалуйста....</p>
+                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня
+                  пожалуйста....</p>
+                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня
+                  пожалуйста....</p>
+                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня
+                  пожалуйста....</p>
+                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня
+                  пожалуйста....</p>
+                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня
+                  пожалуйста....</p>
+                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня
+                  пожалуйста....</p>
+                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня
+                  пожалуйста....</p>
+                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня
+                  пожалуйста....</p>
+                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня
+                  пожалуйста....</p>
+                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня
+                  пожалуйста....</p>
+                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня
+                  пожалуйста....</p>
+                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня
+                  пожалуйста....</p>
+                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня
+                  пожалуйста....</p>
+                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня
+                  пожалуйста....</p>
+                <p class="mb-2"><span class="text-color-blue">Wendia:</span> Как меня достала версткааа! Убейте меня
+                  пожалуйста....</p>
               </div>
 
               <div class="chat__input">
                 <img src="./img/angle-left-solid.svg" alt="">
-                <input type="text" maxlength="15" class="form-control" id="inputNickname"
-                  aria-describedby="emailHelp" placeholder="Напиши что-нибудь...">
+                <input type="text" maxlength="15" class="form-control" id="inputNickname" aria-describedby="emailHelp"
+                  placeholder="Напиши что-нибудь...">
               </div>
 
             </div>
@@ -416,6 +481,7 @@
   <script src="https://kit.fontawesome.com/5aa26e8b69.js" crossorigin="anonymous"></script>
 
   <script>
+
     $(document).ready(function () {
       $('#btnSettings').click(function () {
         $('.settings').show();
@@ -429,7 +495,32 @@
         $('.game__btn-back').hide();
         $('.game__btn-settings').show();
       });
+
+      $('#btnInvitePlayers').click(function () {
+        var text = $('.modal-invite-players__input').val();
+        navigator.clipboard.writeText(text);
+      });
     });
+
+    const alertPlaceholder = document.getElementById('btnInvitePlayersPlaceholder')
+    const appendAlert = (message, type) => {
+      const wrapper = document.createElement('div')
+      wrapper.innerHTML = [
+        `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+        `   <div>${message}</div>`,
+        '   <button type="button" class="my-btn-close" data-bs-dismiss="alert" aria-label="Close"><i class="fa-solid fa-xmark" style="color: #ffffff;"></i></button>',
+        '</div>'
+      ].join('')
+
+      alertPlaceholder.append(wrapper)
+    }
+
+    const alertTrigger = document.getElementById('btnInvitePlayers')
+    if (alertTrigger) {
+      alertTrigger.addEventListener('click', () => {
+        appendAlert('Ссылка была успешно скопирована!', 'success')
+      })
+    }
   </script>
 </body>
 
