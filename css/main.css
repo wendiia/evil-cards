@@ -830,6 +830,36 @@ button:hover {
 }
 
 /* ИГРА */
+.btn-strat-game {
+  position: absolute;
+  z-index: 17;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: auto;
+  width: 20%;
+  height: 10%;
+  color: #FFF;
+  border-radius: 15px !important;
+  font-family: Gilroy;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.test23 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5568627451);
+  z-index: 16;
+}
+
 .modal-game-end h5 {
   font-size: 1.4em;
   color: #4EB5B5;

@@ -74,7 +74,6 @@
     </div>
   </div>
 
-
   <!-- Модальное окно предупреждения о кике игрока -->
   <div class="modal-kick-player modal fade" id="modalKickPlayer" tabindex="-1" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
@@ -165,6 +164,20 @@
         <button class="w-50 mx-auto"> Сохранить </button>
       </div>
     </div>
+  </div>
+
+
+  <!-- Модальное окно о начале игры -->
+  <div class="modal-strat-game" id="modalStratGame">
+    <button class="btn-strat-game">
+      Начать играть
+      <svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="40" height="46" viewBox="0 0 40 46" fill="none">
+        <path
+          d="M38.02 20.7119C40.02 21.8666 40.02 24.7533 38.02 25.908L4.49502 45.2637C2.49502 46.4184 -0.00498199 44.975 -0.00498199 42.6656L-0.00498199 3.95429C-0.00498199 1.64489 2.49502 0.201516 4.49502 1.35622L38.02 20.7119Z"
+          fill="white" />
+      </svg>
+    </button>
+    <div class="test23"></div>
   </div>
 
   <main>
@@ -659,7 +672,7 @@
   <script src="./js/bootstrap.bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/5aa26e8b69.js" crossorigin="anonymous"></script>
 
-  
+
   <script>
     $(document).ready(function () {
       $('.game-chat').toggle();
@@ -672,7 +685,14 @@
         $('.game-chat').toggle();
         $('#chatBtn').toggle();
       });
+
+
+      $('#modalStratGame').click(function () {
+        $('#modalStratGame').toggle();
+      });
+
       
+
     });
   </script>
 </body>
